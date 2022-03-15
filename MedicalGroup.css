@@ -177,28 +177,7 @@
     margin: 0 auto;
 }
 
-/*count down*/
 
-.timer-area {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-.countdown {
-    height: 200px;
-    display: flex;
-    text-align: center;
-    margin-bottom: 40%;
-  }
-  
-  .day,
-  .hour,
-  .minute,
-  .second {
-    font-size: 30px;
-  }
   
 
 /* SECTION */
@@ -223,6 +202,26 @@ section {
     margin: 0 auto;
     background-image: linear-gradient(to right, pink, purple);
 }
+/*count down*/
+
+.timer-area {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+.timer-area > .countdown {
+    text-align: center;
+    margin-bottom: 40%;
+  }
+  
+  .timer-area > .day,
+  .timer-area >.hour,
+  .timer-area >.minute,
+  .timer-area >.second {
+    font-size: 30px;
+  }
 
 /* ABOUT AREA */
 .about-area {

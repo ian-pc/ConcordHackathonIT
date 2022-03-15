@@ -178,8 +178,9 @@
 }
 
 /*count down*/
+
 .timer {
-    min-height: 100vh;
+    min-height: 100px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -196,12 +197,9 @@
   .hour,
   .minute,
   .second {
-    font-size: 3rem;
+    font-size: 30px;
   }
   
-  .waiting {
-    height: 50vh;
-  }
 
 /* SECTION */
 section {
@@ -540,9 +538,9 @@ section {
 
 /* FOOTER AREA */
 .footer-area {
-    height:auto
-    text-align : center;
-    background-color: purple;
+    height:auto;
+    text-align:center;
+    background-color:purple;
 }
 
 .footer-area * {

@@ -5,7 +5,7 @@ window.onscroll = function() {scrollFunction()};
 /*timer*/
 const countdown = () => {
   // Specify the date and time we are counting down to.
-  const countDate = new Date("Jan 1, 2035 00:00:00").getTime();
+  const countDate = new Date("Jan 1, 2024 00:00:00").getTime();
   const now = new Date().getTime();
   const remainingTime = countDate - now;
 
@@ -19,10 +19,15 @@ const countdown = () => {
   const textMinute = Math.floor((remainingTime % hour) / minute);
   const textSecond = Math.floor((remainingTime % minute) / second);
 
-  document.querySelector(".day").innerText = textDay > 0 ? textDay : 0;
-  document.querySelector(".hour").innerText = textHour > 0 ? textHour : 0;
-  document.querySelector(".minute").innerText = textMinute > 0 ? textMinute : 0;
-  document.querySelector(".second").innerText = textSecond > 0 ? textSecond : 0;
+  document.querySelector(".day").innerText = 10;
+  document.querySelector(".hour").innerText = 10;
+  document.querySelector(".minute").innerText = 10;
+  document.querySelector(".second").innerText = 10;
+
+  // document.querySelector(".day").innerText = textDay > 0 ? textDay : 0;
+  // document.querySelector(".hour").innerText = textHour > 0 ? textHour : 0;
+  // document.querySelector(".minute").innerText = textMinute > 0 ? textMinute : 0;
+  // document.querySelector(".second").innerText = textSecond > 0 ? textSecond : 0;
 };
 
 // should use 500 as setInterval won't always run on time.

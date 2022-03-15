@@ -13,5 +13,11 @@
 	  }
 	});
 
+	function logSubmit(event) {
+		console.log("fjeij");
+	}
+
+	const form = document.getElementById("password");
+	form.addEventListener('submit', logSubmit);
 
 })(jQuery);

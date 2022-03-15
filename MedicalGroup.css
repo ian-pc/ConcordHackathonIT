@@ -286,7 +286,6 @@ section {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    height: fit-content;
   }
   
   /* The actual timeline (the vertical ruler) */

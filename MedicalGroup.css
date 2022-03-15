@@ -205,7 +205,6 @@ section {
 /*count down*/
 
 .timer-area {
-    height: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -213,7 +212,6 @@ section {
   }
 .timer-area > .countdown {
     text-align: center;
-    margin-bottom: 40%;
   }
   
   .timer-area > .day,

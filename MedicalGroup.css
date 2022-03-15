@@ -208,6 +208,13 @@ section {
     justify-content: center;
 }
 
+.timer-area > .time{
+   font-size: 50px;
+   font-weight: bold;
+   text-align: center; 
+   letter-spacing: 3px;
+}
+
 
 /* ABOUT AREA */
 .about-area {

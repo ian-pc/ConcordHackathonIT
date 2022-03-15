@@ -2,7 +2,7 @@
 window.onload = function() {scrollFunction()};
 window.onscroll = function() {scrollFunction()};
 
-/*timer
+/*timer*/
 const countdown = () => {
   // Specify the date and time we are counting down to.
   const countDate = new Date("Jan 1, 2024 00:00:00").getTime();
@@ -29,8 +29,6 @@ const countdown = () => {
   // document.querySelector(".minute").innerText = textMinute > 0 ? textMinute : 0;
   // document.querySelector(".second").innerText = textSecond > 0 ? textSecond : 0;
 };
-
-*/
 
 // should use 500 as setInterval won't always run on time.
 setInterval(countdown, 500);

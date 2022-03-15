@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!-- internet explorer 최신버전 유지 -->
+        
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+        <title>Medical Group</title>
+        <!-- saved from url=(0013)about:internet --> <!-- // 경고문구 방지용 -->
+        
+
+        <!-- icon  -->
+        <script src="https://kit.fontawesome.com/59d4618d8b.js" crossorigin="anonymous"></script>
+        <!-- fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+        <!-- user style -->
+        <link rel="stylesheet" href="MedicalGroup.css">
+
+    </head>
+
+    <body>
+
+        <header class="header-area navbar-fade" id="header">
+            <nav class="navbar">
+                <a class="navbar-brand" id="navbarBrand">logo</a>
+                <a class="navbar-toggler" id="toggleBtn"><i class="fas fa-bars"></i></a>
+                <div class="navbar-menu" id="menu">
+                    <div class="nav-item"><a class="nav-link" id="navbarAbout">about</a></div>
+                    <div class="nav-item"><a class="nav-link" id="navbarActivities">activities</a></div>
+                    <div class="nav-item"><a class="nav-link" id="navbarPortfolio">campaign</a></div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="section-container">
+            <section class="timer">
+                <div>
+                  <h2>Counting down</h2>
+                  <div class="countdown">
+                    <div class="container-day">
+                      <h3 class="day">Time</h3>
+                      <h3>Day</h3>
+                    </div>
+                    <div class="container-hour">
+                      <h3 class="hour">Time</h3>
+                      <h3>hour</h3>
+                    </div>
+                    <div class="container-minute">
+                      <h3 class="minute">Time</h3>
+                      <h3>minute</h3>
+                    </div>
+                    <div class="container-second">
+                      <h3 class="second">Time</h3>
+                      <h3>Second</h3>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class="about-area" id="about">
+                <div class="title">
+                ABOUT
+                </div>
+                <div class="picture">
+                    <img src="img/temp-profile.jpg">
+                    <div class="name">Hyeonji (Tiffany) Ahn</div>
+                    <div class="description">St. Marks School class of 2024</div>
+                </div>
+                <div class="text">
+                    <div class="intro">
+                        소개글 자리
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="info">
+                                <i class="far fa-calendar-alt"></i> 17th March, 2005
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <i class="fa fa-phone"></i> +82 01-2172-7101
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <i class="fa fa-envelope"></i> ahj2875@gmail.com
+                            </div>
+                        </li>
+                        <li>
+                            <div class="info">
+                                <i class="fa fa-home"></i> HOME ADRESS
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="sns">
+                        <a href="https://www.facebook.com/profile.php?id=100054270902801">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hj2236588/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCOkwdz6OFHLTbT4K3CB3VUw">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="activities-area" id="activities">
+                <div class="title">
+                    ACTIVITIES
+                </div>
+                <div class="container">
+                    <div class="item">
+                        <div class="icon"><span><i class="fas fa-music"></i></span></div>
+                        <div class="activities">DANCE</div>
+                        <div class="content">* 설명란 *</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><span><i class="fas fa-hands-helping"></i></span></div>
+                        <div class="activities">VOLUNTEER</div>
+                        <div class="content">* 설명란 *</div>
+                    </div>
+                    <div class="item">
+                        <div class="icon"><span><i class="fas fa-desktop"></i></span></div>
+                        <div class="activities">COMPUTER PROGRAMMING</div>
+                        <div class="content">* 설명란 *</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio-area" id="portfolio">
+                <div class="title">
+                    PORTFOLIO
+                </div>
+                <div class="filter">
+                    <ul class="list">
+                        <li class="listItem active" id="all">
+                            ALL
+                        </li>
+                        <li class="listItem" id="dance">
+                            DANCE
+                        </li>
+                        <li class="listItem" id="computer-programming">
+                            COMPUTER PROGRAMMING
+                        </li>
+                        <li class="listItem" id="volunteer">
+                            VOLUNTEER
+                        </li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <div class="filterItem computer-programming"> 
+                        <div class="image" >
+                            <div class="overlay"><i class="fas fa-info"></i></div>
+                            <img src="img/computer_programming_temp.jpg">
+                        </div>
+                        <div class="main">
+                            메인 제목 
+                        </div>
+                        <div class="sub">
+                            부제목 
+                        </div>
+                        <div class="text">
+                            설명
+                        </div>
+                    </div>
+                    <div class="filterItem volunteer"> 
+                        <div class="image" >
+                            <div class="overlay"><i class="fas fa-info"></i><</div>
+                            <img src="img/Volunteer_temp.jpg">
+                        </div>
+                        <div class="main">
+                            메인 제목 
+                        </div>
+                        <div class="sub">
+                            부제목 
+                        </div>
+                        <div class="text">
+                            설명
+                        </div>
+                    </div>
+                    <div class="filterItem dance"> 
+                        <div class="image" >
+                            <div class="overlay"><i class="fas fa-info"></i><</div>
+                            <img src="img/attention_tap-dance.jpg">
+                        </div>
+                        <div class="main">
+                            메인 제목 
+                        </div>
+                        <div class="sub">
+                            부제목 
+                        </div>
+                        <div class="text">
+                            설명
+                        </div>
+                    </div>
+                    <div class="filterItem dance"> 
+                        <div class="image" >
+                            <div class="overlay"><i class="fas fa-info"></i></i><</div>
+                            <img src="img/how-you-like-that.jpg">
+                        </div>
+                        <div class="main">
+                            메인 제목 
+                        </div>
+                        <div class="sub">
+                            부제목 
+                        </div>
+                        <div class="text">
+                            설명
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <footer class="footer-area">
+            <div class="sns">
+                <div class ="item">
+                    <a href="https://www.facebook.com/profile.php?id=100054270902801">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+                <div class ="item">
+                    <a href="https://www.instagram.com/hj2236588/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class ="item">
+                       <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </footer>
+        
+        <div id="portfolioModal" class="modal">
+            <span class="close" id="modalClose">&times;</span>
+            <div class="container">
+                <img id="modalImage">
+                <div id="modalMain" class="modal-main">  </div>
+                <div id="modalSub" class="modal-sub">  </div>
+                <div id="modalText" class="modal-text">  </div>
+            </div>
+        </div>
+
+        <!-- user script-->
+        <script src="portfolio.js"></script>
+    </body>
+</html>

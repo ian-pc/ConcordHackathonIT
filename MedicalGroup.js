@@ -22,9 +22,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("time").innerText = "Hellow"
-  // document.getElementById("time").innerHTML = days + "d " + hours + "h "
-  // + minutes + "m " + seconds + "s ";
+  document.getElementById("time").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
@@ -61,54 +59,6 @@ function menuToggle() {   /* 토글 버튼 */
 }
 
 document.getElementById('toggleBtn').addEventListener('click',menuToggle); /* toggle 누르면 토글함수 호출 */
-
-/* welcome area */
-var imageSlideIndex = 1; /* 현재 노출되는 이미지의 번호 */
-showImageSlides(imageSlideIndex);
-
-function imageSlideTimer(){
-    plusImageSlides(1);
-}
-
-var imageTimer = setInterval(imageSlideTimer, 3000);
-
-function plusImageSlides(n) {
-  clearInterval(imageTimer);
-  imageTimer = setInterval(imageSlideTimer, 3000);
-
-  showImageSlides(imageSlideIndex += n);
-}
-
-function currentImageSlide(n){
-  clearInterval(imageTimer);
-  imageTimer = setInterval(imageSlideTimer, 3000);
-
-  showImageSlides(imageSlideIndex = n);
-}
-
-function showImageSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName('image-slide');
-    var dots = document.getElementsByClassName('dot');
-    if (n > slides.length) {imageSlideIndex = 1}    /* 첫번째 이미지로 초기화 */
-    if (n < 1) {imageSlideIndex = slides.length}   /* 마지막 이미지로 초기화 */
-    for (i = 0; i < slides.length; i++) {           /* 이미지가 보이지 않게 설정 */
-        slides[i].style.display = 'none';
-    }
-    for (i = 0; i < dots.length; i++) {             /* dots가 보이지 않게 설정 */
-        dots[i].className = dots[i].className.replace(' active', '');
-    }
-    slides[imageSlideIndex-1].style.display = 'block';  
-    dots[imageSlideIndex-1].className += ' active';  /* 선택된 이미지와 닷만 보이게 설정 */
-  }
-
-document.getElementById('imagePrev').addEventListener('click', plusImageSlides.bind(null,-1));
-document.getElementById('imageNext').addEventListener('click', plusImageSlides.bind(null,1));
-  
-document.getElementById('firstDot').addEventListener('click', currentImageSlide.bind(null,1));
-document.getElementById('secondDot').addEventListener('click', currentImageSlide.bind(null,2));
-document.getElementById('thirdDot').addEventListener('click', currentImageSlide.bind(null,3));
-document.getElementById('forthDot').addEventListener('click', currentImageSlide.bind(null,4)); 
 
 /* PORTFOLIO AREA */
 filterSelection('all');

@@ -279,7 +279,6 @@ section {
     box-sizing: border-box;
     background-color: #474e5d;
     font-family: Helvetica, sans-serif;
-    font-size: 16px;
   }
   
   /* The actual timeline (the vertical ruler) */
@@ -372,6 +371,10 @@ section {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    font-size: 16px;
+  }
+  .activities-area>.content>h2{
+      font-weight: bold;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */

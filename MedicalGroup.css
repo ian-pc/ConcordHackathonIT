@@ -279,6 +279,7 @@ section {
     box-sizing: border-box;
     background-color: #474e5d;
     font-family: Helvetica, sans-serif;
+    font-size: 16px;
   }
   
   /* The actual timeline (the vertical ruler) */

@@ -180,13 +180,14 @@
 /*count down*/
 
 .timer-area {
-    height: 100px;
+    height: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
   }
 .countdown {
+    height: 200px;
     display: flex;
     text-align: center;
     margin-bottom: 40%;

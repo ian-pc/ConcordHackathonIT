@@ -22,7 +22,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("time").innerHTML = "Hellow"
+  document.getElementById("time").innerText = "Hellow"
   // document.getElementById("time").innerHTML = days + "d " + hours + "h "
   // + minutes + "m " + seconds + "s ";
 

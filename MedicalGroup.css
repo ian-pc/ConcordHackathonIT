@@ -198,7 +198,7 @@ section {
     width: 100px;
     height: 10px;
     margin: 0 auto;
-    background-image: linear-gradient(to right, pink, purple);
+    background-image: linear-gradient(to right, blue, skyblue);
 }
 /*count down*/
 
@@ -251,7 +251,7 @@ section {
 
 /* Set a background color */
 .activities-area {
-    background-color: #ffd86e;
+    background-color: skyblue;
     font-family: Helvetica, sans-serif;
   }
   
@@ -289,8 +289,8 @@ section {
     width: 25px;
     height: 25px;
     right: -7px;
-    background-color: #61D4E8;
-    border: 4px solid #2DA1E7;
+    background-color: rgb(95, 95, 255);
+    border: 4px solid blue;
     top: 15px;
     border-radius: 50%;
     z-index: 1;

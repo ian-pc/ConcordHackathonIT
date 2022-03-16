@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ 
  /* COMMON */
  *{
      margin:0;
@@ -378,6 +380,49 @@ section {
       left: 2%;
     }
   }
+
+/*MAP AREA*/
+path {
+    stroke: white;
+    fill:paleturquoise !important;
+
+    transition: fill .4s ease;
+}
+
+path:hover {
+    fill: orange !important;
+}
+
+#us-map {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#details-box {
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 24px;
+    position: fixed;
+    color: white;
+    font-family: "Poppins";
+    background-color: black;
+    width: fit-content;
+    transform: translateX(-50%);
+    transition: opacity .4s ease;
+    z-index: 1;
+}
+
+/*raffle Image*/
+.raffle{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
 
 /* PORTFOLIO AREA */
 .portfolio-area {

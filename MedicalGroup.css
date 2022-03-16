@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
- 
+
  /* COMMON */
  *{
      margin:0;
@@ -19,7 +19,7 @@
      height: 100%;
  }
 
- a{ 
+ a{
     text-decoration: none;
     font-size: 14px;
     text-transform: uppercase; /*  대문자 설정 */
@@ -34,7 +34,7 @@
      position: relative;
      top: 0;
      left: 0;
-     width: 100%; 
+     width: 100%;
      z-index: 99; /* 크면 클수록 사용자와 가까이 (제일 위에 나타남) */
      background-color: white;
      box-shadow: 0 1px 10px rgba(0,0,0,0.3); /* 밑그림자 */
@@ -68,7 +68,7 @@
  }
 
  @media (min-width: 992px){  /*992px 이상일때 실행*/
-    .header-area > .navbar { 
+    .header-area > .navbar {
         max-width: 900px;
         margin: 0 auto; /*가운데 정렬*/
      }
@@ -133,11 +133,18 @@
      background-color: rgba(0,0,0,0.4);
  }
 
+ .login {
+     display: block;
+     padding-left: 50px;
+     color: black;
+     cursor: pointer;
+ }
+
  .header-area > .navbar > .navbar-menu >.nav-item > .nav-link {
      display: block;
      padding-left: 50px;
      color: white;
-     cursor: pointer; 
+     cursor: pointer;
  }
 
  @media (min-width:992px) {
@@ -181,7 +188,7 @@
 /* SECTION */
 section {
     padding: 100px 0;
-    
+
 }
 
 .title {
@@ -214,7 +221,7 @@ section {
 .timer-area > .time{
    font-size: 50px;
    font-weight: bold;
-   text-align: center; 
+   text-align: center;
    letter-spacing: 3px;
 }
 
@@ -254,14 +261,14 @@ section {
     background-color: skyblue;
     font-family: Helvetica, sans-serif;
   }
-  
+
   /* The actual timeline (the vertical ruler) */
   .activities-area> .timeline {
     position: relative;
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   /* The actual timeline (the vertical ruler) */
   .activities-area>.timeline::after {
     content: '';
@@ -273,7 +280,7 @@ section {
     left: 50%;
     margin-left: -3px;
   }
-  
+
   /* Container around content */
   .activities-area> .timeline>.container {
     padding: 10px 50px;
@@ -281,7 +288,7 @@ section {
     background-color: inherit;
     width: 50%;
   }
-  
+
   /* The circles on the timeline */
   .activities-area> .timeline>.container::after {
     content: '';
@@ -295,17 +302,17 @@ section {
     border-radius: 50%;
     z-index: 1;
   }
-  
+
   /* Place the container to the left */
   .activities-area> .timeline>.left {
     left: -15%;
   }
-  
+
   /* Place the container to the right */
   .activities-area> .timeline>.right {
     left: 52%;
   }
-  
+
   /* Add arrows to the left container (pointing right) */
   .activities-area> .timeline>.left::before {
     content: " ";
@@ -319,7 +326,7 @@ section {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
   }
-  
+
   /* Add arrows to the right container (pointing left) */
   .activities-area> .timeline>.right::before {
     content: " ";
@@ -333,12 +340,12 @@ section {
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   }
-  
+
   /* Fix the circle for containers on the right side */
   .activities-area> .timeline>.right::after {
     left: -7px;
   }
-  
+
   /* The actual content */
   .activities-area> .timeline>.container>.content {
     padding: 20px 30px;
@@ -347,21 +354,21 @@ section {
     border-radius: 6px;
     color:black;
    }
-  
+
   /* Media queries - Responsive timeline on screens less than 600px wide */
   @media screen and (max-width: 1000px) {
   /* Place the timelime to the left */
   .activities-area>.timeline::after {
       left: 5%;
     }
-  
+
   /* Full-width containers */
   .activities-area> .timeline>.container {
       width: 80%;
       padding-left: 70px;
       padding-right: 25px;
     }
-  
+
   /* Make sure that all arrows are pointing leftwards */
   .activities-area> .timeline>.container::before {
       left: 60px;
@@ -369,12 +376,12 @@ section {
       border-width: 10px 10px 10px 0;
       border-color: transparent white transparent transparent;
     }
-  
+
   /* Make sure all circles are at the same spot */
   .activities-area> .timeline> .left::after, .activities-area> .timeline>.right::after {
       left: 1%;
     }
-  
+
   /* Make all right containers behave like the left ones */
   .activities-area> .timeline>.right,.activities-area> .timeline>.left {
       left: 2%;
@@ -524,7 +531,7 @@ path:hover {
 
 #portfolioModal {
 	display: none;
-	position: fixed; 
+	position: fixed;
 	z-index: 100;
 	left: 0;
 	top: 0;
@@ -601,7 +608,7 @@ path:hover {
 .footer-area > .sns > .item {
     display: inline-block;
     padding:10px;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .footer-area > .sns > .item > a >i {
@@ -611,4 +618,3 @@ path:hover {
 .footer-area > .sns > .item > a >i:hover {
     color: pink;
 }
-

@@ -31,8 +31,6 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-// should use 500 as setInterval won't always run on time.
-setInterval(countdown, 500);
 
 function scrollFunction() {  /* 네비게이션바 */
     var header = document.getElementById('header');
@@ -59,6 +57,27 @@ function menuToggle() {   /* 토글 버튼 */
 }
 
 document.getElementById('toggleBtn').addEventListener('click',menuToggle); /* toggle 누르면 토글함수 호출 */
+
+/*MAP AREA*/
+var detailsBox = document.getElementById('details-box');
+
+document.addEventListener('mouseover', function (e) {
+  if (e.target.tagName == 'path') {
+    var content = e.target.id;
+    detailsBox.innerHTML = content;
+    detailsBox.style.opacity = "100%";
+  }
+  else {
+    detailsBox.style.opacity = "0%";
+  }
+});
+
+window.onmousemove = function (e) {
+  var x = e.clientX,
+      y = e.clientY;
+  detailsBox.style.top = (y+40)+'px' ;
+  detailsBox.style.left = x+'px';
+};
 
 /* PORTFOLIO AREA */
 filterSelection('all');

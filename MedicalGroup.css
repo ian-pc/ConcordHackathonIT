@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ /* COMMON */
+ *{
+     margin:0;
+     padding:0;
+ }
+
+ body{
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box; /*safari,chrome*/
+     -moz-box-sizing: border-box; /*firefox*/
+     word-break: break-all;
+     font-family:'Sunflower', sans-serif;
+ }
+
+ img{
+     width: 100%;
+     height: 100%;
+ }
+
+ a{
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase; /*  대문자 설정 */
+ }
+
+ ul{
+     list-style-type: none; /*앞에 점 없애기 */
+ }
+
+ /* Header */
+ .header-area{
+     position: relative;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 99; /* 크면 클수록 사용자와 가까이 (제일 위에 나타남) */
+     background-color: white;
+     box-shadow: 0 1px 10px rgba(0,0,0,0.3); /* 밑그림자 */
+ }
+
+ .navbar-fade{  /* animation */
+     animation-name: navbar-fade;
+     animation-duration: 0.5s;
+     -webkit-animation-name: navbar-fade;
+     -webkit-animation-duration: 0.5s;
+ }
+
+ @keyframes navbar-fade{
+    from {opacity: .4}
+    to {opacity: 1}
+ }
+
+ @-webkit-keyframes navbar-fade{
+    from {opacity: .4}
+    to {opacity: 1}
+ }
+
+ .header-area.navbar-fixed { /* java에서 추가됨 */
+    position: fixed;
+ }
+
+ .header-area > .navbar {  /* margin 늘어난 만큼 빼주는게 관건*/
+    width: calc(100% - 120px);
+    margin: 0 60px;
+    overflow: hidden;
+ }
+
+ @media (min-width: 992px){  /*992px 이상일때 실행*/
+    .header-area > .navbar {
+        max-width: 900px;
+        margin: 0 auto; /*가운데 정렬*/
+     }
+ }
+
+ @media (min-width: 1200px){ /*1200px 이상일때 실행*/
+    .header-area > .navbar {
+        max-width: 1000px;
+     }
+ }
+
+ .header-area > .navbar > .navbar-brand {
+     display: inline-block;
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%); /*가운데 정렬 효과를 줌 */
+     font-size: 32px;
+     cursor: pointer;
+ }
+
+ .header-area > .navbar > .navbar-toggler * {
+    font-size: 32px;
+}
+
+ .header-area > .navbar > .navbar-toggler {
+     float: right;
+     height: 70px;
+     line-height: 70px; /*가운데 정렬 효과*/
+     font-size: 32px;
+     cursor: pointer;
+ }
+
+ @media(min-width: 992px){
+    .header-area > .navbar > .navbar-toggler{
+        display: none;
+    }
+ }
+
+ .header-area > .navbar > .navbar-menu {
+     position: absolute;
+     background-color: rgba(0,0,0,0.5);
+     top: 70px;
+     left: 0;
+     width: 100%;
+     height: 0px;
+     transition: 0.5s ease;
+     overflow: hidden;
+ }
+
+ .header-area > .navbar > .navbar-menu.show { /* java에서 추가될거임 */
+     height: 200px;
+ }
+
+ .header-area > .navbar > .navbar-menu >.nav-item {
+     float: none;
+     display: block;
+     height: 50px;
+     line-height: 50px;
+ }
+
+ .header-area > .navbar > .navbar-menu > .nav-item:hover * {
+     background-color: rgba(0,0,0,0.4);
+ }
+
+ .login {
+     display: block;
+     padding-left: 50px;
+     color: black;
+     cursor: pointer;
+ }
+
+ .header-area > .navbar > .navbar-menu >.nav-item > .nav-link {
+     display: block;
+     padding-left: 50px;
+     color: white;
+     cursor: pointer;
+ }
+
+ @media (min-width:992px) {
+    .header-area > .navbar > .navbar-menu {
+        position: relative;
+        background-color: transparent;
+        float: right;
+        top: 0;
+        width: auto;
+        height: auto;
+        transition: none;
+    }
+
+    .header-area > .navbar > .navbar-menu.show{
+        height: auto;
+    }
+
+    .header-area > .navbar > .navbar-menu >.nav-item{
+        display: inline-block;
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .header-area > .navbar > .navbar-menu > .nav-item:hover * {
+        background-color: transparent;
+    }
+
+    .header-area > .navbar > .navbar-menu > .nav-item > .nav-link {
+        display: black;
+        padding: 0 20px;
+        color: black;
+    }
+ }
+
+/* SECTION CONTAINER */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* SECTION */
+section {
+    padding: 100px 0;
+
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    padding-bottom: 100px;
+}
+
+.title::after {
+    content:"";
+    display: block;
+    width: 100px;
+    height: 10px;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, blue, skyblue);
+}
+/*count down*/
+
+.timer-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+    padding-bottom: 0cm;
+}
+
+.timer-area > .time{
+   font-size: 50px;
+   font-weight: bold;
+   text-align: center;
+   letter-spacing: 3px;
+}
+
+
+/* ABOUT AREA */
+.about-area {
+    height: auto;
+    position: relative;
+}
+
+.about-area > .picture {
+    position:relative;
+    display: block;
+    text-align: center;
+}
+
+.about-area > .picture > img {
+    max-width: 300px;
+    max-height: 900px;
+    border-radius: 15px;
+}
+
+.about-area > .picture > .name{
+    font-size: 30px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.about-area > .picture > .description{
+    font-size: 20px;
+    text-align: center;
+}
+/* ACTIVITIES AREA*/
+
+/* Set a background color */
+.activities-area {
+    background-color: skyblue;
+    font-family: Helvetica, sans-serif;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .activities-area> .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* The actual timeline (the vertical ruler) */
+  .activities-area>.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  /* Container around content */
+  .activities-area> .timeline>.container {
+    padding: 10px 50px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
+  /* The circles on the timeline */
+  .activities-area> .timeline>.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -7px;
+    background-color: rgb(95, 95, 255);
+    border: 4px solid blue;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* Place the container to the left */
+  .activities-area> .timeline>.left {
+    left: -15%;
+  }
+
+  /* Place the container to the right */
+  .activities-area> .timeline>.right {
+    left: 52%;
+  }
+
+  /* Add arrows to the left container (pointing right) */
+  .activities-area> .timeline>.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+
+  /* Add arrows to the right container (pointing left) */
+  .activities-area> .timeline>.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Fix the circle for containers on the right side */
+  .activities-area> .timeline>.right::after {
+    left: -7px;
+  }
+
+  /* The actual content */
+  .activities-area> .timeline>.container>.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    color:black;
+   }
+
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 1000px) {
+  /* Place the timelime to the left */
+  .activities-area>.timeline::after {
+      left: 5%;
+    }
+
+  /* Full-width containers */
+  .activities-area> .timeline>.container {
+      width: 80%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .activities-area> .timeline>.container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+
+  /* Make sure all circles are at the same spot */
+  .activities-area> .timeline> .left::after, .activities-area> .timeline>.right::after {
+      left: 1%;
+    }
+
+  /* Make all right containers behave like the left ones */
+  .activities-area> .timeline>.right,.activities-area> .timeline>.left {
+      left: 2%;
+    }
+  }
+
+/*MAP AREA*/
+path {
+    stroke: white;
+    fill:paleturquoise !important;
+
+    transition: fill .4s ease;
+}
+
+path:hover {
+    fill: orange !important;
+}
+
+#us-map {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#details-box {
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 24px;
+    position: fixed;
+    color: white;
+    font-family: "Poppins";
+    background-color: black;
+    width: fit-content;
+    transform: translateX(-50%);
+    transition: opacity .4s ease;
+    z-index: 1;
+}
+
+/*raffle Image*/
+.raffle{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+/* PORTFOLIO AREA */
+.portfolio-area {
+	height: auto;
+}
+
+.portfolio-area > .filter > .list {
+	text-align: center;
+}
+
+.portfolio-area > .filter > .list > .listItem {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.portfolio-area > .filter > .list > .listItem:hover,
+.portfolio-area > .filter > .list > .listItem.active {
+	color: blue;
+}
+
+.portfolio-area > .container {
+	padding-top: 50px;
+}
+
+.portfolio-area > .container > .filterItem {
+	display: none;
+	width: calc(100% - 40px);
+	margin: 10px;
+	text-align: center;
+}
+
+@media (min-width: 992px) {
+	.portfolio-area > .container > .filterItem {
+		width: calc(50% - 40px);
+	}
+}
+
+.portfolio-area > .container > .filterItem.show {
+    display: inline-block;
+}
+
+.portfolio-area > .container > .filterItem > .image {
+	position: relative;
+	max-height: 700px;
+}
+
+@media (min-width: 992px) {
+	.portfolio-area > .container > .filterItem > .image {
+		height: 300px;
+	}
+}
+
+.portfolio-area > .container > .filterItem > .image > .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.portfolio-area > .container > .filterItem > .image:hover > .overlay {
+	background-image: linear-gradient(to right, skyblue , blue);
+	opacity: 0.9;
+}
+
+.portfolio-area > .container > .filterItem > .image > .overlay > i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 48px;
+}
+
+.portfolio-area > .container > .filterItem > .image > img {
+	border-radius: 5px;
+}
+
+.portfolio-area > .container > .filterItem > .main {
+	font-size: 24px;
+	font-weight: bold;
+	padding: 10px 0;
+}
+
+.portfolio-area > .container > .filterItem > .sub {
+	font-size: 16px;
+	color: #777;
+}
+
+.portfolio-area > .container > .filterItem > .text {
+	display: none;
+}
+
+#portfolioModal {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+	text-align: center;
+	overflow: hidden;
+}
+
+#portfolioModal > .close {
+	display: block;
+	text-align: right;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+	cursor: pointer;
+	padding: 0 20px;
+}
+
+#portfolioModal > .close:hover,
+#portfolioModal > .close:focus {
+	color: #bbb;
+}
+
+#portfolioModal > .container {
+	width: 100%;
+	height: auto;
+}
+
+#portfolioModal > .container > img {
+	width: calc(100% - 40px);
+	padding: 20px;
+}
+
+@media (min-width: 992px) {
+	#portfolioModal > .container > img {
+		max-width: 700px;
+	}
+}
+
+#portfolioModal > .container > .modal-main {
+	position: relative;
+	font-size: 24px;
+	font-weight: bold;
+	color: white;
+	padding: 10px 0;
+}
+
+#portfolioModal > .container > .modal-sub {
+	font-size: 20px;
+	color: white;
+	padding: 10px 0;
+}
+
+#portfolioModal > .container > .modal-text {
+	font-size: 16px;
+	color: #bbb;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#portfolioModal>.container>.modal-text>a{
+    color:skyblue
+}
+
+/* FOOTER AREA */
+.footer-area {
+    height:auto;
+    text-align:center;
+    background-color:blue;
+}
+
+.footer-area * {
+    color: white;
+}
+
+.footer-area > .sns > .item {
+    display: inline-block;
+    padding:10px;
+    cursor: pointer;
+}
+
+.footer-area > .sns > .item > a >i {
+    font-size: 24px;
+}
+
+.footer-area > .sns > .item > a >i:hover {
+    color: skyblue;
+}

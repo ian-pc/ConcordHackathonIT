@@ -450,7 +450,7 @@ path:hover {
 
 .portfolio-area > .filter > .list > .listItem:hover,
 .portfolio-area > .filter > .list > .listItem.active {
-	color: purple;
+	color: blue;
 }
 
 .portfolio-area > .container {
@@ -460,7 +460,7 @@ path:hover {
 .portfolio-area > .container > .filterItem {
 	display: none;
 	width: calc(100% - 40px);
-	margin: 20px;
+	margin: 10px;
 	text-align: center;
 }
 
@@ -497,7 +497,7 @@ path:hover {
 }
 
 .portfolio-area > .container > .filterItem > .image:hover > .overlay {
-	background-image: linear-gradient(to right, pink , purple);
+	background-image: linear-gradient(to right, skyblue , blue);
 	opacity: 0.9;
 }
 
@@ -592,13 +592,18 @@ path:hover {
 #portfolioModal > .container > .modal-text {
 	font-size: 16px;
 	color: #bbb;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#portfolioModal>.container>.modal-text>a{
+    color:skyblue
 }
 
 /* FOOTER AREA */
 .footer-area {
     height:auto;
     text-align:center;
-    background-color:purple;
+    background-color:blue;
 }
 
 .footer-area * {
@@ -616,5 +621,5 @@ path:hover {
 }
 
 .footer-area > .sns > .item > a >i:hover {
-    color: pink;
+    color: skyblue;
 }

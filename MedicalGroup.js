@@ -118,9 +118,8 @@ function removeClass(element, name) {
 }
 
 document.getElementById('all').addEventListener('click', filterSelection.bind(null, 'all'));
-document.getElementById('dance').addEventListener('click', filterSelection.bind(null, 'dance'));
-document.getElementById('computer-programming').addEventListener('click', filterSelection.bind(null, 'computer-programming'));
-document.getElementById('volunteer').addEventListener('click', filterSelection.bind(null, 'volunteer'));
+document.getElementById('2021').addEventListener('click', filterSelection.bind(null, '2021'));
+document.getElementById('2022').addEventListener('click', filterSelection.bind(null, '2022'));
 
 function viewPortfolio(event){
     var polyNode = event.target;

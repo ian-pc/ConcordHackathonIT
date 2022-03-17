@@ -29,6 +29,10 @@
      list-style-type: none; /*앞에 점 없애기 */
  }
 
+ h2 {
+   font-family: 'sunflower'
+ }
+
  /* Header */
  .header-area{
      position: relative;
@@ -397,7 +401,7 @@ path {
 }
 
 path:hover {
-    fill: orange !important;
+    fill: darkblue !important;
 }
 
 #us-map {
